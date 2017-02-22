@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:background="@color/newGray"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <!--设置toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toobar"
+        android:background="?attr/colorPrimaryDark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+    <!--账号和编辑账号的text-->
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <!--账号-->
+        <TextView
+            android:layout_width="54dp"
+            android:text="账号:"
+            android:textSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"/>
+
+        <!--编辑账号的text-->
+        <EditText
+            android:id="@+id/account"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:hint="请输入账号"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!--密码和编辑密码的text-->
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <!--密码-->
+        <TextView
+            android:layout_width="50dp"
+            android:text="密码:"
+            android:textSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"/>
+
+        <!--编辑密码的text-->
+        <EditText
+            android:id="@+id/password"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!--记住密码-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/remember_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="记住密码"
+                android:textSize="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--登录按钮-->
+    <Button
+        android:textSize="16dp"
+        android:background="#32CD99"
+        android:text="登录"
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</LinearLayout>

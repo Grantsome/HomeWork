@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-WhatsApp-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5e3d029017545e87bae5a03a7c71bb0e8279b549">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-WhatsApp-2.8.1_48011b6010e613693a52349665b7d20843c91bfb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Flickr-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f6efbd19d6c55bdeffae1682cb222b6c99f96d95">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Flickr-2.8.1_cf84078ba21ba56097f3bf64abf3654d9335225c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tom\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="31fbbff1ddbf98f3aa7377c94d33b0447c646b6e">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\httpcore-4.3.2_3954929d026079a686dcfe608977ae95639c83a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.1.0_fe1423ba964def534d6a6b0a1f8058a7ab149f14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.0_39e0be410762c61c2f749fd6c62763a218e0f67f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.0_af47974a0eec1041d6a03f2ca60fde9a70abbcfc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\org.litepal.android\core\1.4.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="2ed5d8f90fadbfa1098d859cda836de0dc31d265">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\org.litepal.android-core-1.4.1_e189c6ed0d0d04b14fc4f707051327b56bc5ab4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Yixin-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="fa4d321d1278bb9f0520d68b6261418a7f449988">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Yixin-2.8.1_1842f68d557e4457744637426131cbe8b9b6dbec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Twitter-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="adf2a73b491cdbd88056ac4dec633cebbad64abd">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Twitter-2.8.1_6f4fa59ae9e600de663615d0e9d1fa524eaa199c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Wechat-Moments-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ebed17f12cb04231b5a8a308435810e3d782ba5e">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Moments-2.8.1_edc95c0b13d46f7088d34d00e30548533504d259.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-GooglePlus-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0e6bcc894babdc819b42d872ea947e8aa318a2a7">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-GooglePlus-2.8.1_159cd0e92e61d9a61102513887e003e576d0748e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.0_f8d587890eb34bac25de5c7eb80c01661fb0fe2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Pinterest-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e69fbcb7c68cb1df9b2301496af42c964a7b3506">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Pinterest-2.8.1_0afe816f2f32cc768660c1b9c394cce944fad62a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.0_d111494b61d0ccabc6fba1e114dff6be36cd3b2d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Yixin-Moments-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5b325cf4d3b5d8edab40824626c9d4c9b8114f11">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Yixin-Moments-2.8.1_ecc3ccc5a3e887d161138f895edd316838848cb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-KakaoStory-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="2217d95131b4a9ba5467a361cf9500f1ba6b51eb">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-KakaoStory-2.8.1_ec70b6ca5826ccab7e96c9adbca8334b3cf9ecda.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Alipay-Moments-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e68fba63229b80905316138488b42a00b3835a5a">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Alipay-Moments-2.8.1_ae4b18415da1a31255e5bd096f2786f39314dcb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Email-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="88417ebcaca5aef34934f715f6c4005d1f491487">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Email-2.8.1_da2ef9775e60b39c9b852d74e6d8957408d77867.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7f2420506110902f033406b25697cf97ee8c38b2">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.1.0_f622dfa37b17e698fe59580dc4b4fe0b33c6276e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Foursquare-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a6d57b3e143df03a034c92c8b8f739ecb8a2b936">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Foursquare-2.8.1_5719e206dd9b8fd11dac5d35198a3353f22dae91.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Yixin-Core-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7aa4215d38b4e08b3496cf9549fcd096b2b4ee3f">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Yixin-Core-2.8.1_cc781a9eafe23cf36d21a6e44eef955437103e13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Wechat-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="80ee36c9074e68409cd3db8c3227a6f18bebf983">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-2.8.1_86217d03dc5e82ddd611a288f7e99ac7ccf42f98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Core-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6b28f6444c88008f7b83cea48a5fbee388717dc6">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Core-2.8.1_34f61d69cc5bfbe0dd07ca2270f7b8957a9b7b8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-KaiXin-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0329f96e38e328da342a9bb74f9c582be516d55e">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-KaiXin-2.8.1_e87e34a68526e0f7c289bee50713859456d0afa2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Douban-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="84a33adbb0fe25493e8bfe67de4a659e612cce20">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Douban-2.8.1_bd776358a0c8f14f26e3773617e7278283d73e35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tom\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\gson-2.7_9032225d4f86d0d7da9f4cd44bda907c3f4d5ae4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.0_fdba2458ea832df8cacdb037b2c1630120d13d7d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-FacebookMessenger-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="239d76e0adf2e5ef6eef11b8f2b8e8db8e1f4319">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-FacebookMessenger-2.8.1_022f5fedaf7779bef9138c6d252ac9eb79388432.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Wechat-Favorite-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ea1676bd532102c0452d4c1745a428ec062d2f80">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Favorite-2.8.1_d69473cb7b3b27326365459131ca41f2412ae154.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tom\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\okio-1.11.0_0013fb091c1ff43b0b6dbafbdbde00c1d60259e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tom\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\glide-3.7.0_d6be6921ada7219d805176d1ceb23e6f2387913c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-QZone-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b69e1369e219bb403313b0552e43fb1661e210ad">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-QZone-2.8.1_2e0ce4ffe6b422a750bec1dcf125ce0f15535101.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Dropbox-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="cbd06ca2ca4c73693c1d44ada0d600d4e52af11a">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Dropbox-2.8.1_4a3ee119b5ee040f254c48b108e9648a02afc357.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Evernote-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="92345a2f8cee983d115c0bd31992bed970e4f36f">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Evernote-2.8.1_84765bbb63b245cf4d82dc5747f96b458aa20638.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Wechat-Core-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="84bcb90bdb43050335311854dd01d9b1155cde26">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Core-2.8.1_ed6928ee64e7852daaf62e6028b0f128fc5a3e14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tom\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.5\442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375\universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.5_d77878a70dc77f5441969dc888e757378d14f334.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Instapaper-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1a5c153401a156ba99f228c057fd8e286bd79d76">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Instapaper-2.8.1_78b22d88e7a4d74f8dbc41946a82f1151830422f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.0_60a3b1292dc3ce2d0e3af2973f168d6e15bd652b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Alipay-Core-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0f4344e2ead2cea115642e9d34a222117311df41">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Alipay-Core-2.8.1_fc38ec9cf1db23088696075292f2ca7074eb3e2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tom\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_1bf2e790911cf2aca4e6403ae3ee5a2610e8e777.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tom\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.8\77bbfe240e437ecb396d982afa0d3bd4f9090ba7\android-async-http-1.4.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.8_ae99f5a0927861e7087aec174e3c03e6b15c484b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Tumblr-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="de19071c85e0f4859d375f04a1fb6085c5cbf4e7">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Tumblr-2.8.1_55d7b081a2854e5b9b8baaad98170191525d18b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Alipay-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="fb96b1fb5a40edb55cf932bc9d0b6605a53be72c">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Alipay-2.8.1_70eb92a086f9316da6e485ea86c8d49247dd022b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Facebook-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c22ae2ef92b1472a75c5cf5535fca0cd1e7e35ba">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Facebook-2.8.1_3a3c5271923850b529ed5637e5284dea6a5e8f4c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Renren-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7751a50bddc3b64cf32d00c35992593a6aa99333">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Renren-2.8.1_22b507bd52b105a9fba48d5309d942898f53b791.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.0_08aac59e05a8a1846997d2e46173fc84a838eb9d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-YouDao-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b8fbb41ef98b8a7ba3b3aabb39ad94eb77679f8b">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-YouDao-2.8.1_c15ef121209fd1d0ec96a905c8cd93bcde018f01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Kakao-Core-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f35080b7c0340ee71e36c01048a7d491a0746575">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Kakao-Core-2.8.1_442ebf1c3ac6f98d1877fcc5a785448f9c11cfb8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.0_8998b2c79adc6b945727f338cc358b9ac98cb454.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-VKontakte-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d266e91dc75f6d4105fbbc7ad4930f6110705cf1">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-VKontakte-2.8.1_1ca1d68ecb7dd7e584e9b38478de807744da333f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Instagram-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f2de3ec51ca58a29a98e0a469f9ffa5514782260">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Instagram-2.8.1_7d4556e243dbc238ed384ae6db0f8a1dcbc0ace2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Pocket-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5c57be10f86e0cb70b8a0298280d4b8f100a2cda">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Pocket-2.8.1_0d4e8441cf19d2a3b4117fddd5169d5365aa153b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.1.0_f1049bf07a099120cf9c8657ddeaf75132fdbd37.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-QQ-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="15ec01ae7f0c4357f010acb66f76628260786628">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-QQ-2.8.1_1faf59447fba49b8e62c64517f579deed9bbc042.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-KakaoTalk-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="4b5691efea9b1f22b0c70d31cc89947eac8fb083">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-KakaoTalk-2.8.1_1b2448b7f9fb590d795827f1010f347e70f03dac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\MobTools-2017.0216.1054.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ede8ab947b1cabf937bf36d8ec51fcd9d61eba84">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\MobTools-2017.0216.1054_14718d70884eca6a71c4af4331e01d5d32488967.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.0_8036aa5b53b875430178f9bd710e7c2d98834a5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.0_2b35edcf98a7d9b2e000d54d386c3e9a8291716c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.0_d5c0bba7ebffe3b83b87127b31babf07e44197bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Line-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="176e0da832e98d39ff7b2cad1dbb1653b5a44da3">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Line-2.8.1_05ef557f9c296de80ddebea6b1321a6e16fe8a9e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\de.hdodenhof-circleimageview-2.1.0_5f23359dea86ac0043b15bc3fb646e5f3fb9b1ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Linkedin-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0fd5fed656b659779fb78eeba190c11d1f91b306">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Linkedin-2.8.1_bbfd2250e0e29fc52e12fc07c12ef146c29ef1be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\MobCommons-2017.0216.1054.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="4ba1c804706f49009600ff1dd32a46f3af7acc9c">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\MobCommons-2017.0216.1054_a9a38ec2ca7f7c2d939aaf78690896b7e92f4d62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-ShortMessage-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="796f76627d41b796ef0bc155816939dd1393fc93">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-ShortMessage-2.8.1_e8de6289f12aa84f5f40f22ac0065f65952e2339.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-Mingdao-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6882c2d4646e5de496bf278b6295c580156a7b2d">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-Mingdao-2.8.1_330cbdf56f651b5d49519da7d71a4fdc758f5470.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-TencentWeibo-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5324bc8daa3a98e12eb0b5ba90ae4638859ab2a4">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-TencentWeibo-2.8.1_9dd05cdc254d4f7cec17dcef252a4db8ba8fe6c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\Test\HomeWork\app\libs\ShareSDK-SinaWeibo-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1e20c658b4eb58dc98b39b22ffb67aa868ef4390">
+        <dex dex="G:\Test\HomeWork\app\build\intermediates\pre-dexed\debug\ShareSDK-SinaWeibo-2.8.1_83ab2cf966b7b62506a360fe1d0c668183766c81.jar" />
+    </item>
+
+</items>

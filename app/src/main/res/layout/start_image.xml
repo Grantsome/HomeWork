@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--布局文件，让activity_start.xml引用，不过貌似不能适配不同的屏幕大小-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/start_image"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/big_text_start_activity"
+        android:textSize="25dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="120dp"
+        android:textColor="#E0E0E0"
+        android:text="知乎日报"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/small_text_start_activity"
+        android:textSize="15dp"
+        android:textColor="#272727"
+        android:text="每天三次，每次七分钟"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

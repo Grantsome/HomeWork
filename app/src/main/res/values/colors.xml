@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gray">#ff666666</color>
+    <color name="newGray">#BEBEBE</color>
+    <color name="newWhtie">#ffffffff</color>
+    <color name="white">#CCFFFFFF</color>
+    <color name="dark">#DD000000</color>
+    <color name="none">#FF333333</color>
+    <color name="click">@android:color/darker_gray</color>
+</resources>

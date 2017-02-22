@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--点击主题日报之后，出现的图片界面的第一张图片-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--点击主题日报日报之后，转化的界面里面的第一张图片-->
+   <ImageView
+       android:scaleType="centerCrop"
+       android:id="@+id/top_news__item_image"
+       android:layout_width="match_parent"
+       android:layout_height="230dp"/>
+
+    <!--点击主题日报日报之后，转化的界面里面的第一张图片下面的那一串小字-->
+    <TextView
+        android:id="@+id/top_news_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:textSize="15dp"/>
+
+</LinearLayout>
