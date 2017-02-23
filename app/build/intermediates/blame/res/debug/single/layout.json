@@ -36,24 +36,24 @@
         "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
-        "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_text_input_password_icon.xml"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\long_item.xml",
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\long_item.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
+        "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_header.xml",
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\home_header.xml"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
         "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
@@ -68,12 +68,12 @@
         "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_layout_snackbar_include.xml"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
         "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_news_content.xml",
@@ -92,16 +92,16 @@
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\menu_item.xml"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_start.xml",
-        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\activity_start.xml"
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_collect.xml",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\activity_collect.xml"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
         "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_collect.xml",
-        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\activity_collect.xml"
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_start.xml",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\activity_start.xml"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\menu\\usermenu.xml",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\menu\\usermenu.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\menu\\mycollect.xml",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\menu\\mycollect.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\menu\\loginmenu.xml",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\menu\\loginmenu.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\menu\\mymenu.xml",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\menu\\mymenu.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\menu\\content_menu.xml",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\menu\\content_menu.xml"
+    }
+]

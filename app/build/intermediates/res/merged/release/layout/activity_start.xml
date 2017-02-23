@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--启动界面的xml-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:fitsSystemWindows="true"
+              android:background="@drawable/start_ui"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--界面的进度条-->
+    <ProgressBar
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/progress_bar"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--界面的图片-->
+    <include layout="@layout/start_image"/>
+
+</RelativeLayout>

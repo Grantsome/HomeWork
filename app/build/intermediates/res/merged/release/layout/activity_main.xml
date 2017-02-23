@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主界面的xml-->
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--刷新-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--设置toolbar-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toobar"
+                android:background="?attr/colorPrimaryDark"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            </android.support.v7.widget.Toolbar>
+
+            <!--设置内容的frameLayout-->
+            <FrameLayout
+                android:id="@+id/frame_layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!--添加一个左侧滑动菜单栏HomeFragment-->
+    <fragment
+        android:id="@+id/home_fragment"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:name="com.grantsome.zhihudaily.Fragment.HomeFragment"/>
+
+</android.support.v4.widget.DrawerLayout>

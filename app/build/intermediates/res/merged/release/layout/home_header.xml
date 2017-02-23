@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--左侧滑动菜单xml-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/all_home_layout"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/menu_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0099cc"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <!--设置头像的默认图片-->
+        <ImageView
+        android:layout_height="70dp"
+        android:layout_width="70dp"
+        android:src="@drawable/header_pic"/>
+
+        <!--设置请登录-->
+        <TextView
+            android:id="@+id/login_text_view"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:text="请登录"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"/>
+
+    </LinearLayout>
+
+    <!--设置我的收藏和离线下载-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/collect_text_view"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:drawableLeft="@drawable/collect_pic"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="我的收藏"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/offline_download_text_view"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/download_pic"
+        android:layout_width="0dp"
+        android:textSize="15dp"
+        android:text="离线下载"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        />
+
+    </LinearLayout>
+
+    <!--设置首页及其图标-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="1">
+
+        <ImageButton
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/home_pic"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            style="@android:style/Widget.Holo.ImageButton"/>
+
+        <TextView
+            android:id="@+id/main_text_view"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="首页"
+            android:layout_marginLeft="65dp"
+            android:textColor="#ff0099cc"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+   <!--设置如大公司日报等日报的list-->
+    <ListView
+        android:id="@+id/list_view_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:divider="@android:color/transparent"
+        android:scrollbars="none"/>
+
+   </LinearLayout>
+
+</LinearLayout>

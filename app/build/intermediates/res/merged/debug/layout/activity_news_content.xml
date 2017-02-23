@@ -1,56 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
 
-  <!--引入一个界面布局-->
-  <com.grantsome.zhihudaily.Fragment.BackgroundFragment
-      android:id="@+id/background_fragment"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
-
-    <!--折叠式标题栏-->
-    <android.support.design.widget.CoordinatorLayout
-        android:id="@+id/coordinator_layout"
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:background="#FFF562"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="60dp">
 
-        <android.support.design.widget.AppBarLayout
-            android:fitsSystemWindows="true"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageButton
+            android:src="@drawable/back_up"
+            android:paddingLeft="15dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/image_view_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
 
-            <!--设置toolbar-->
-            <android.support.v7.widget.Toolbar
-                app:layout_scrollFlags="scroll|enterAlways"
-                android:id="@+id/my_toobar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
+        <ImageButton
+            android:id="@+id/image_button_share"
+            android:gravity="center_vertical"
+            android:layout_marginRight="220dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/share_ui"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
 
-            </android.support.v7.widget.Toolbar>
+        <ImageButton
+            android:id="@+id/image_button_collect"
+            android:gravity="center_vertical"
+            android:layout_marginRight="140dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/collect_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
 
-        </android.support.design.widget.AppBarLayout>
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/comment_ui"
+            android:layout_marginRight="75dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/text_view_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
 
-        <!--嵌入以滑动方式查看屏幕以外的数据信息的NestedScrollView,其中指定的app:layout_behavior是系统提供的与AppLayoutBar互动的属性-->
-        <android.support.v4.widget.NestedScrollView
-            android:scrollbars="vertical"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/parse"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/text_view_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--webView-->
             <WebView
                 android:id="@+id/web_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
             </WebView>
 
-        </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.NestedScrollView>
 
-</RelativeLayout>
+</LinearLayout>
