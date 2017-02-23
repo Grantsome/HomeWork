@@ -36,12 +36,12 @@
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_alipay.png"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_evernote.png",
-        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_evernote.png"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_instapaper.png",
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_instapaper.png"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_evernote.png",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_evernote.png"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_logo.png",
@@ -68,12 +68,12 @@
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_laiwang.png"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_line.png",
-        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_line.png"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_check_default.png",
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_check_default.png"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_line.png",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_line.png"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_vkontakte.png",
@@ -144,12 +144,12 @@
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_yixinmoments.png"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_kakaostory.png",
-        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_kakaostory.png"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_youtube.png",
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_youtube.png"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_kakaostory.png",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_kakaostory.png"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_pocket.png",
@@ -160,12 +160,12 @@
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_renren.png"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_check_checked.png",
-        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_check_checked.png"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_auth_title_back.png",
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_auth_title_back.png"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_check_checked.png",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_check_checked.png"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ssdk_oks_classic_tumblr.png",

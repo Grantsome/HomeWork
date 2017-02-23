@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--这个是滑动菜单里面的文字 比如大公司日报/日常心理学等等-->
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
           android:id="@+id/text_view_item"

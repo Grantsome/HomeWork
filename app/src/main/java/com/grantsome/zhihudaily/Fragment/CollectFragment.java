@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.grantsome.zhihudaily.Activity.CollectActivity;
 import com.grantsome.zhihudaily.Activity.LatestContentActivity;
+import com.grantsome.zhihudaily.Activity.NewsContentActivity;
 import com.grantsome.zhihudaily.Adapter.MainNewsItemAdapter;
 import com.grantsome.zhihudaily.Adapter.NewsItemAdapter;
 import com.grantsome.zhihudaily.Database.MyDataBaseHelper;
@@ -49,11 +50,14 @@ public class CollectFragment extends BaseFragment {
 
     private MyDataBaseHelper myDataBaseHelper;
 
+
+
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.collect_item,container,false);
         listViewNews = (ListView) view.findViewById(R.id.list_view_item);
         Stories stories = ((CollectActivity)getActivity()).getStories();
+        final boolean isFromLatestActivity = ((CollectActivity) getActivity()).getIsFromLatestContentActivity();
         myDataBaseHelper =  new MyDataBaseHelper(getActivity(),"Collect.db",null,2);
         if(stories == null){
             SQLiteDatabase sqLiteDatabase = myDataBaseHelper.getWritableDatabase();
@@ -69,14 +73,26 @@ public class CollectFragment extends BaseFragment {
                     textViewTitle.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent intent = new Intent(activity, LatestContentActivity.class);
-                            int[] startingLocation = new int[2];
-                            view.getLocationOnScreen(startingLocation);
-                            startingLocation[0] += view.getWidth()/2;
-                            intent.putExtra(ApiUtil.START_LOCATION,startingLocation);
-                            intent.putExtra("code",code);
-                            intent.putExtra("title",title);
-                            startActivity(intent);
+                            if(isFromLatestActivity) {
+                                Intent intent = new Intent(activity, LatestContentActivity.class);
+                                int[] startingLocation = new int[2];
+                                view.getLocationOnScreen(startingLocation);
+                                startingLocation[0] += view.getWidth() / 2;
+                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
+                                intent.putExtra("code", code);
+                                intent.putExtra("title", title);
+                                startActivity(intent);
+                            }
+                            if (!isFromLatestActivity){
+                                Intent intent = new Intent(activity, NewsContentActivity.class);
+                                int[] startingLocation = new int[2];
+                                view.getLocationOnScreen(startingLocation);
+                                startingLocation[0] += view.getWidth() / 2;
+                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
+                                intent.putExtra("code", code);
+                                intent.putExtra("title", title);
+                                startActivity(intent);
+                            }
                         }
                     });
                     mainNewsItemAdapter = new MainNewsItemAdapter(activity);
@@ -105,15 +121,27 @@ public class CollectFragment extends BaseFragment {
                     textViewTitle.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            LogUtil.d("CollectFragment","textView点击事件已经开始执行");
-                            Intent intent = new Intent(activity, LatestContentActivity.class);
-                            int[] startingLocation = new int[2];
-                            view.getLocationOnScreen(startingLocation);
-                            startingLocation[0] += view.getWidth()/2;
-                            intent.putExtra(ApiUtil.START_LOCATION,startingLocation);
-                            intent.putExtra("title",title);
-                            intent.putExtra("code",code);
-                            startActivity(intent);
+                            if(isFromLatestActivity) {
+                                LogUtil.d("CollectFragment", "textView点击事件已经开始执行");
+                                Intent intent = new Intent(activity, LatestContentActivity.class);
+                                int[] startingLocation = new int[2];
+                                view.getLocationOnScreen(startingLocation);
+                                startingLocation[0] += view.getWidth() / 2;
+                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
+                                intent.putExtra("title", title);
+                                intent.putExtra("code", code);
+                                startActivity(intent);
+                            }
+                            if(!isFromLatestActivity){
+                                Intent intent = new Intent(activity, NewsContentActivity.class);
+                                int[] startingLocation = new int[2];
+                                view.getLocationOnScreen(startingLocation);
+                                startingLocation[0] += view.getWidth() / 2;
+                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
+                                intent.putExtra("title", title);
+                                intent.putExtra("code", code);
+                                startActivity(intent);
+                            }
                         }
                     });
                     listViewNews.addHeaderView(top);
@@ -123,16 +151,26 @@ public class CollectFragment extends BaseFragment {
                             int[] startingLocation = new int[2];
                             view.getLocationOnScreen(startingLocation);
                             startingLocation[0] += view.getWidth()/2;
-                            Intent intent = new Intent(activity, LatestContentActivity.class);
-                            Stories stories = ((CollectActivity)getActivity()).getStories();
-                            intent.putExtra(ApiUtil.START_LOCATION,startingLocation);
-                            intent.putExtra("stories",stories);
-                            intent.putExtra("title",title);
-                            intent.putExtra("code",code);
-                            startActivity(intent);
+                            if(isFromLatestActivity) {
+                                Intent intent = new Intent(activity, LatestContentActivity.class);
+                                Stories stories = ((CollectActivity) getActivity()).getStories();
+                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
+                                intent.putExtra("stories", stories);
+                                intent.putExtra("title", title);
+                                intent.putExtra("code", code);
+                                startActivity(intent);
+                            }
+                            if(!isFromLatestActivity){
+                                    Intent intent = new Intent(activity, NewsContentActivity.class);
+                                    Stories stories = ((CollectActivity) getActivity()).getStories();
+                                    intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
+                                    intent.putExtra("stories", stories);
+                                    intent.putExtra("title", title);
+                                    intent.putExtra("code", code);
+                                    startActivity(intent);
+                            }
                         }
                     });
-                    LogUtil.d("CollectFragment","title 是 " + title);
                     mainNewsItemAdapter = new MainNewsItemAdapter(activity);
                     listViewNews.setAdapter(mainNewsItemAdapter);
 
@@ -141,6 +179,7 @@ public class CollectFragment extends BaseFragment {
             cursor.close();
         }
         imageLoader = ImageLoader.getInstance();
+
         listViewNews.setBackgroundColor(ContextCompat.getColor(activity,R.color.white));
         return view;
     }

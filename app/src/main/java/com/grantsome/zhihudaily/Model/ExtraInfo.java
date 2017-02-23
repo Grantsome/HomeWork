@@ -1,10 +1,12 @@
 package com.grantsome.zhihudaily.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by tom on 2017/2/21.
  */
 
-public class ExtraInfo {
+public class ExtraInfo implements Serializable{
     /**
      * long_comments : 48
      * popularity : 2853
