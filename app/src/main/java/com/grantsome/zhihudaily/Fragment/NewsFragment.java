@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.grantsome.zhihudaily.Activity.MainActivity;
@@ -34,6 +35,7 @@ import org.apache.http.Header;
 
 /**
  * Created by tom on 2017/2/15.
+ * 这一段代码和MainFragment里面的差不多,注释也就不写了
  */
 @SuppressLint("ValidFragment")
 public class NewsFragment extends BaseFragment {
@@ -75,34 +77,36 @@ public class NewsFragment extends BaseFragment {
         listViewNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                int[] startingLocation = new int[2];
-                view.getLocationOnScreen(startingLocation);
-                startingLocation[0] += view.getWidth()/2;
                 Stories stories = (Stories) adapterView.getAdapter().getItem(i);
                 Intent intent = new Intent(activity, NewsContentActivity.class);
-                intent.putExtra(ApiUtil.START_LOCATION,startingLocation);
                 isRead = true;
                 intent.putExtra("stories",stories);
                 intent.putExtra("isLight",((MainActivity) activity).isLight());
-
                 String readSequence = PreUtil.getStringFromDefault(activity, "read", "");
                 String[] splits = readSequence.split(",");
                 StringBuffer sb = new StringBuffer();
-                if (splits.length >= 200) {
-                    for (int j = 100; j < splits.length; j++) {
+                if (splits.length >= 70) {
+                    for (int j = 35; j < splits.length; j++) {
                         sb.append(splits[j] + ",");
                     }
                     readSequence = sb.toString();
                 }
 
-                if (!readSequence.contains(stories.getId() + "")) {
-                    readSequence = readSequence + stories.getId() + ",";
-                }
-                PreUtil.putStringToDefault(activity, "read", readSequence);
-                textViewTitle.setTextColor(ContextCompat.getColor(activity,R.color.click));
+                if(stories!=null) {
 
-                startActivity(intent);
-                activity.overridePendingTransition(0,0);
+                    if (!readSequence.contains(stories.getId() + "")) {
+                        readSequence = readSequence + stories.getId() + ",";
+                    }
+                    PreUtil.putStringToDefault(activity, "read", readSequence);
+
+                    textViewTitle.setTextColor(ContextCompat.getColor(activity, R.color.click));
+
+                    startActivity(intent);
+                    activity.overridePendingTransition(0, 0);
+                }
+                if(stories == null){
+                    Toast.makeText(getContext(), "点击此图片或文字无其他内容，请勿重试", Toast.LENGTH_SHORT).show();
+                }
             }
 
         });

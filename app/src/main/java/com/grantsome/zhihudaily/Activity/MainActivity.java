@@ -18,9 +18,13 @@ import android.widget.Toast;
 import com.grantsome.zhihudaily.Database.CacheDbHelper;
 import com.grantsome.zhihudaily.Fragment.HomeFragment;
 import com.grantsome.zhihudaily.Fragment.MainFragment;
+import com.grantsome.zhihudaily.Fragment.NewsFragment;
 import com.grantsome.zhihudaily.R;
 import com.grantsome.zhihudaily.Util.LogUtil;
 
+/*
+* 首页的activity,主要是fragment
+*/
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -109,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             //replace()方法里面的参数。第一个：容器的资源id,第二个:待添加碎片的实例化,第三个:标记的TAG;
             getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_from_right,R.anim.slide_out_to_left).replace(R.id.frame_layout_content,new MainFragment(),"latestNews").commit();
         } else {
-
+            ((NewsFragment) getSupportFragmentManager().findFragmentByTag("themeNews")).updateTheme();
         }
     }
 
@@ -178,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(menuItem);
     }
 
-    //给toolbar设置标题的函数
+    //给toolbar设置标题的函数,以在进入主题日报的时候将主题日报的名字显示在toolbar上面
     public void setToolBarTitle(String text){
         toolbar.setTitle(text);
     }
@@ -209,8 +213,6 @@ public class MainActivity extends AppCompatActivity {
     public void closeMenu(){
         drawerLayout.closeDrawers();
     }
-
-
 
 }
 

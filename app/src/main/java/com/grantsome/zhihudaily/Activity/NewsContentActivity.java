@@ -35,6 +35,10 @@ import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 import cn.sharesdk.onekeyshare.ShareContentCustomizeCallback;
 
+/**
+ * Created by tom on 2017/2/15.
+ * 这一段代码和LatestNewsContent里面的很像,代码注释也差不多,就不写了
+ */
 public class NewsContentActivity extends AppCompatActivity {
 
     private WebView webView;
@@ -73,23 +77,16 @@ public class NewsContentActivity extends AppCompatActivity {
 
     private boolean isNeedCollected = false;
 
+    private boolean isRead;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_content);
         webCacheDbHelper = new WebCacheDbHelper(this,1);
         isLight = getIntent().getBooleanExtra("isLight",true);
-        //coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
-        //coordinatorLayout.setVisibility(View.INVISIBLE);
-        //backgroundFragment = (BackgroundFragment) findViewById(R.id.background_fragment);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toobar);
-        //toolbar.setBackgroundColor(ContextCompat.getColor(this,isLight?android.R.color.holo_blue_dark: android.R.color.background_dark));
-        //setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_ui);
         stories = (Stories) getIntent().getSerializableExtra("stories");
         if(stories!=null){
-            LogUtil.d("NewsContentActivity","stories不为空但是你还是看不见");
             sharedTitle = stories.getTitle();
         }else {
             isStoriesEmpty = true;
@@ -133,7 +130,6 @@ public class NewsContentActivity extends AppCompatActivity {
                         sqLiteDatabase.close();
                         Gson gson = new Gson();
                         extraInfo = gson.fromJson(responseString, ExtraInfo.class);
-                        LogUtil.d("LatestActivity", "extraInfo的评论数量" + extraInfo.getComments());
                         initView(extraInfo);
                     }
                 });

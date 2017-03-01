@@ -8,11 +8,13 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.ResponseHandlerInterface;
 
 /**
+ * 依赖了android-async-http框架，以发起网络请求，请求网络数据
  * Created by tom on 2017/2/12.
  */
 
 public class HttpUtil {
 
+    //官方建议使用的一个静态的AsyncHttpClient();
     private static AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
 
     public static void get(String url, ResponseHandlerInterface responseHandlerInterface){

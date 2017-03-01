@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.grantsome.zhihudaily.Model.LatestNews;
 import com.grantsome.zhihudaily.R;
+import com.grantsome.zhihudaily.Util.LogUtil;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -102,20 +103,22 @@ public class ViewFragment extends FrameLayout implements View.OnClickListener{
             imageViewDotsList.add(imageView);
         }
 
-        for(int i=0;i<len;i++){
+        for(int i=0;i<=len+1;i++){
            View v = LayoutInflater.from(context).inflate(R.layout.news_content_layout,null);
            ImageView imageView = (ImageView) v.findViewById(R.id.image_view_title);
            TextView textView = (TextView) v.findViewById(R.id.text_view_title);
            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
            if(i == 0){
                imageLoader.displayImage(latestTopStoriesBean.get(len-1).getImage(),imageView,displayImageOptions);
+               LogUtil.d("ViewFragment","当i=0时，latestTopStoriesBean.get(len-1).gteTitle()"+latestTopStoriesBean.get(len-1).getTitle());
                textView.setText(latestTopStoriesBean.get(len-1).getTitle());
            } else if(i ==len+1) {
                imageLoader.displayImage(latestTopStoriesBean.get(0).getImage(),imageView,displayImageOptions);
                textView.setText(latestTopStoriesBean.get(0).getTitle());
+               LogUtil.d("ViewFragment","当i=len+1时，latestTopStoriesBean.get(0).gteTitle()"+latestTopStoriesBean.get(0).getTitle());
            } else {
                imageLoader.displayImage(latestTopStoriesBean.get(i-1).getImage(),imageView,displayImageOptions);
-               textView.setText(latestTopStoriesBean.get(i-1).getTitle());
+               textView.setText(latestTopStoriesBean.get(i-1).getTitle());LogUtil.d("ViewFragment","当i不等于前两者的时候latestTopStoriesBean.get(0).gteTitle()"+latestTopStoriesBean.get(i-1).getTitle());
            }
             v.setOnClickListener(this);
             viewList.add(v);
@@ -154,7 +157,7 @@ public class ViewFragment extends FrameLayout implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         if(ItemClickListener != null){
-            LatestNews.TopStoriesBean topStoriesBean= latestTopStoriesBean.get(viewPager.getCurrentItem());
+            LatestNews.TopStoriesBean topStoriesBean= latestTopStoriesBean.get(viewPager.getCurrentItem()-1);
             ItemClickListener.click(view,topStoriesBean);
         }
     }

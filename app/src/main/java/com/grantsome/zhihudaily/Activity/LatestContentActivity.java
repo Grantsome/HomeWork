@@ -83,34 +83,51 @@ public class LatestContentActivity extends AppCompatActivity {
 
     private TextView textViewParise;
 
+    private boolean isRead = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_latest_content);
+        //最开始的定义里面传入的两个参数，第一个是context参数，第二个是版本号
+        //获取webCacheDbHelper的实例，该类在Database里面
         webCacheDbHelper = new WebCacheDbHelper(this,1);
+        //得到传进来的isLight的Boolean值，判断是否为夜间模式
         isLight = getIntent().getBooleanExtra("isLight",true);
+        //得到传进来的stories
         stories = (Stories) getIntent().getSerializableExtra("stories");
-        //toolbar.setBackgroundColor(ContextCompat.getColor(this,isLight?android.R.color.holo_blue_dark: android.R.color.background_dark));
+        //判断是否为空，原因:当从收藏的界面里面传入的时候，stories为空，但会传入title和id;
         if(stories!=null) {
-            //collapsingToolbarLayout.setTitle(stories.getTitle());
+            //如果不为空就设置分享的题目为stories.getTitle();
             sharedTitle = stories.getTitle();
         }else {
+            //令isStoriesEmpty=true,在初始化的时候;
             isStoriesEmpty = true;
-            //collapsingToolbarLayout.setTitle(getIntent().getStringExtra("title"));
+            //调试的时候的打印日志
             LogUtil.d("LatestContentActivity","title" + getIntent().getStringExtra("title"));
+            //如果为空就设置分享的题目为getIntent传入的title
             sharedTitle = getIntent().getStringExtra("title");
         }
-        //collapsingToolbarLayout.setContentScrimColor(ContextCompat.getColor(this,isLight?android.R.color.holo_blue_dark:android.R.color.black));
         webView = (WebView) findViewById(R.id.web_view);
+        //设置webView的支持JavaScript,默认为False
         webView.getSettings().setJavaScriptEnabled(true);
+        //一个普通的网页加载 cache会被检查,内容也会被重新效验。第一次加载网页的时候,内容会被存储到cache本地，设置cache的模式,LOAD_CACHE_ELSE_NETWORK的意思是使用cache里面的资源,不管过期与否。原因：根据知乎日报API接口的特性，每次的都是一样的
         webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        //开启DOM Storage API功能，即设置本地的DOM存储，用于持久化存储，默认为false;
         webView.getSettings().setDomStorageEnabled(true);
+        //开启Database Storage API功能；
         webView.getSettings().setDatabaseEnabled(true);
+        //开启Application Cache功能
         webView.getSettings().setAppCacheEnabled(true);
+        //判断网络是否可用
         if(HttpUtil.isNetWorkConntected(this)){
                 if(stories!=null) {
+                    //设置分享的时候的链接
                     sharedUrl = ApiUtil.BASEURL+ApiUtil.CONTENT + stories.getId();
+                    //调试打印日志
+                    LogUtil.d("LatestContentActivity","stories.getTitle()的内容为"+stories.getTitle());
+                    //发起网络请求,TextHttpResponseHandler继承与AsyncHttpResponseHandler,重写了了onSuccess和onFailure,将请求结果由byte数组转化为String
                     HttpUtil.get(ApiUtil.CONTENT + stories.getId(), new TextHttpResponseHandler() {
                         @Override
                         public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
@@ -119,10 +136,15 @@ public class LatestContentActivity extends AppCompatActivity {
 
                         @Override
                         public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                            //使用该webCacheDbHelper里面的数据库,写入数据
                             SQLiteDatabase sqLiteDatabase = webCacheDbHelper.getWritableDatabase();
+                            //把得到的String里面的  '  全部替换成 ''
                             responseString = responseString.replaceAll("'", "''");
+                            //replace方法，把newsId换成了stories.getId(),把json换成了responseString
                             sqLiteDatabase.execSQL("replace into Cache(newsId,json) values(" + stories.getId() + ",'" + responseString + "')");
+                            //关闭数据库
                             sqLiteDatabase.close();
+                            //解析数据
                             parseJson(responseString);
                         }
                     });
@@ -138,14 +160,17 @@ public class LatestContentActivity extends AppCompatActivity {
                             responseString = responseString.replaceAll("'", "''");
                             sqLiteDatabase.execSQL("replace into Cache(newsId,json) values(" + stories.getId() + ",'" + responseString + "')");
                             sqLiteDatabase.close();
+                            //解析新闻额外信息的json
                             Gson gson = new Gson();
                             extraInfo = gson.fromJson(responseString,ExtraInfo.class);
                             LogUtil.d("LatestActivity","extraInfo的评论数量" + extraInfo.getComments());
+                            //初始化额外信息的界面
                             initView(extraInfo);
                         }
                     });
                 }
                if(stories == null) {
+                   //stories==null的时候得到getIntent里面的code也就是ID
                    sharedUrl = ApiUtil.BASEURL+ApiUtil.CONTENT + getIntent().getIntExtra("code", 520);
                    LogUtil.d("LatestContentActivity", "stories为空，所以getIntent为" + getIntent().getIntExtra("code", 520));
                    HttpUtil.get(ApiUtil.CONTENT + getIntent().getIntExtra("code", 520), new TextHttpResponseHandler() {
@@ -158,14 +183,37 @@ public class LatestContentActivity extends AppCompatActivity {
                        public void onSuccess(int statusCode, Header[] headers, String responseString) {
                            SQLiteDatabase sqLiteDatabase = webCacheDbHelper.getWritableDatabase();
                            responseString = responseString.replaceAll("'", "''");
+                           LogUtil.d("LatestActivity","执行");
                            sqLiteDatabase.execSQL("replace into Cache(newsId,json) values(" + getIntent().getIntExtra("code", 520) + ",'" + responseString + "')");
                            sqLiteDatabase.close();
                            parseJson(responseString);
                        }
                    });
+                   LogUtil.d("LatestContentActivity", "加载新闻内容函数执行完毕");
+                   HttpUtil.get(ApiUtil.STORY_EXTRA + getIntent().getIntExtra("code", 520), new TextHttpResponseHandler() {
+                       @Override
+                       public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+
+                       }
+
+                       @Override
+                       public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                           LogUtil.d("LatestActivity","当stories==null的时候，加载评论开始执行");
+                           SQLiteDatabase sqLiteDatabase = webCacheDbHelper.getWritableDatabase();
+                           responseString = responseString.replaceAll("'", "''");
+                           sqLiteDatabase.execSQL("replace into Cache(newsId,json) values(" + getIntent().getIntExtra("code", 520) + ",'" + responseString + "')");
+                           sqLiteDatabase.close();
+                           Gson gson = new Gson();
+                           extraInfo = gson.fromJson(responseString,ExtraInfo.class);
+                           LogUtil.d("LatestActivity","当stories==null的时候extraInfo的评论数量" + extraInfo.getComments());
+                           initView(extraInfo);
+                       }
+                   });
+                   LogUtil.d("LatestContentActivity","加载评论函数已经执行完毕");
                }
         }else {
             if(stories!=null) {
+                //在数据库里面读数据
                 SQLiteDatabase sqLiteDatabase = webCacheDbHelper.getReadableDatabase();
                 Cursor cursor = sqLiteDatabase.rawQuery("select * from Cache where newsId = " + stories.getId(), null);
                 if (cursor.moveToFirst()) {
@@ -186,12 +234,11 @@ public class LatestContentActivity extends AppCompatActivity {
                 sqLiteDatabase.close();
             }
         }
-
-        //setBackgroundFragment(savedInstanceState);
     }
 
     private void initView(ExtraInfo extraInfo){
         imageButtonBack = (ImageButton) findViewById(R.id.image_view_back);
+        //点击back的时候返回
         imageButtonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -199,12 +246,16 @@ public class LatestContentActivity extends AppCompatActivity {
             }
         });
         imageButtonCollect = (ImageButton) findViewById(R.id.image_button_collect);
+        //点击Collect的时候的点击事件
         imageButtonCollect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //设置isNeedCollect为true;
                 isNeedCollected = true;
+                //弹出Toast
                 Toast.makeText(getApplicationContext(), "已收藏", Toast.LENGTH_SHORT).show();
                 if(isNeedCollected){
+                    //实例化Intent并且传入stories
                     Intent intentOne = new Intent(LatestContentActivity.this,CollectActivity.class);
                     intentOne.putExtra("stories",stories);
                     startActivityForResult(intentOne,0);
@@ -212,6 +263,7 @@ public class LatestContentActivity extends AppCompatActivity {
             }
         });
         imageButtonShare = (ImageButton) findViewById(R.id.image_button_share);
+        //点击share的时候的点击事件
         imageButtonShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -220,6 +272,7 @@ public class LatestContentActivity extends AppCompatActivity {
 
                 }
         });
+        //设置评论的数量
         textViewComments = (TextView) findViewById(R.id.text_view_comment);
         if(extraInfo==null){
             LogUtil.d("LatestContentActivity","extraInfo内容为空");
@@ -238,8 +291,10 @@ public class LatestContentActivity extends AppCompatActivity {
                 startActivity(intentTwo);
             }
         });
+        //设置点赞的数量
         textViewParise = (TextView) findViewById(R.id.text_view_praise);
         int num = extraInfoOne.getPopularity();
+        //要注意必须使用Integer.toString,不然会报错
         textViewParise.setText(Integer.toString(num));
         textViewParise.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -251,14 +306,18 @@ public class LatestContentActivity extends AppCompatActivity {
     }
 
 
+    //解析NewsContent的json
     private void parseJson(String responseString){
         Gson gson = new Gson();
         newsContent = gson.fromJson(responseString,NewsContent.class);
         final ImageLoader imageLoader = ImageLoader.getInstance();
+        //cacheInMemory,设置下载的图片是否在缓存中CacheOnDisk，设置下载的图片是否在SDcard的内存中
         DisplayImageOptions displayImageOptions = new DisplayImageOptions.Builder().cacheInMemory(true).cacheOnDisk(true).build();
         imageView = (ImageView) findViewById(R.id.image_view_title);
         imageLoader.displayImage(newsContent.getImage(),imageView,displayImageOptions);
+        //css: rel描述了当前页面与href的关系，这里为引用式样式表/链接外部样式表  styleSheet样式表 href为地址
         String css = "<link rel=\"stylesheet\" href=\"file:///android_asset/css/news.css\" type=\"text/css\">";
+        //在html的头部引用css的文件
         String html = "<html><head>" + css + "</head><body>" + newsContent.getBody() + "</body></html>";
         html = html.replace("<div class=\"ima-place-holder\">","");
         webView.loadDataWithBaseURL("x-data://base",html,"text/html","UTF-8",null);
@@ -271,6 +330,7 @@ public class LatestContentActivity extends AppCompatActivity {
         finish();
     }
 
+    //分享
     private void showShare(){
         ShareSDK.initSDK(this);
         OnekeyShare oks = new OnekeyShare();

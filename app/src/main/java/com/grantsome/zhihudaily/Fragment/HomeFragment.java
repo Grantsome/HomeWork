@@ -32,6 +32,8 @@ import java.util.List;
 
 /**
  * Created by tom on 2017/2/14.
+ * 滑动菜单
+ * 为了加载从json里面获取的主题日报的名字，在HomeFragment里面写了一个继承与NewsTypeAdapter的内部类
  */
 
 public class HomeFragment extends BaseFragment {
@@ -116,6 +118,7 @@ public class HomeFragment extends BaseFragment {
         newsListItems = new ArrayList<NewsListItem>();
         if (HttpUtil.isNetWorkConntected(activity)) {
             LogUtil.d("HomeFragment","if已执行");
+            //网络请求获取主题日报列表的json
             HttpUtil.get(ApiUtil.THEMES, new JsonHttpResponseHandler() {
 
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -127,6 +130,7 @@ public class HomeFragment extends BaseFragment {
                 }
             });
         }else {
+            //本地缓存获取主题日报列表的json
             String json = PreUtil.getStringFromDefault(activity,ApiUtil.THEMES,"");
             try{
                 JSONObject jsonObject = new JSONObject(json);
@@ -139,12 +143,16 @@ public class HomeFragment extends BaseFragment {
 
     private void parseJson(JSONObject response){
         try{
+            //得到json里面的other
             JSONArray jsonArray = response.getJSONArray("others");
             for(int i = 0; i < jsonArray.length();i++){
                 NewsListItem newsListItem = new NewsListItem();
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
+                //得到other里面的name
                 newsListItem.setTitle(jsonObject.getString("name"));
+                //得到other里面的id
                 newsListItem.setId(jsonObject.getString("id"));
+                //加入到list里面
                 newsListItems.add(newsListItem);
             }
             newsTypeAdapter = new NewsTypeAdapter();
