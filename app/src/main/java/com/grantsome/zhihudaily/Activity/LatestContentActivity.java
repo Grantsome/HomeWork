@@ -97,6 +97,8 @@ public class LatestContentActivity extends AppCompatActivity {
         isLight = getIntent().getBooleanExtra("isLight",true);
         //得到传进来的stories
         stories = (Stories) getIntent().getSerializableExtra("stories");
+        isRead = getIntent().getBooleanExtra("isRead",false);
+        LogUtil.d("LatestContentActivity","isRead的值为"+isRead);
         //判断是否为空，原因:当从收藏的界面里面传入的时候，stories为空，但会传入title和id;
         if(stories!=null) {
             //如果不为空就设置分享的题目为stories.getTitle();
@@ -384,5 +386,6 @@ public class LatestContentActivity extends AppCompatActivity {
 // 启动分享GUI
         oks.show(this);
     }
+
 
 }

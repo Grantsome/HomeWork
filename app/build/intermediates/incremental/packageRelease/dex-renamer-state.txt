@@ -1,4 +1,4 @@
-#Wed Mar 01 13:58:52 CST 2017
+#Thu Mar 02 12:46:47 CST 2017
 base.0=G\:\\Test\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=G\:\\Test\\HomeWork\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex

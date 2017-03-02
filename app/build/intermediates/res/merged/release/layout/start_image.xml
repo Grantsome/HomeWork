@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/small_text_start_activity"
         android:textSize="15dp"
-        android:textColor="#272727"
+        android:textColor="#DBf021"
         android:text="每天三次，每次七分钟"
         android:layout_marginTop="540dp"
         android:layout_marginLeft="120dp"

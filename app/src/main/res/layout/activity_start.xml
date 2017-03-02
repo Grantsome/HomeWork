@@ -2,16 +2,28 @@
 <!--启动界面的xml-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:fitsSystemWindows="true"
-              android:background="@drawable/start_ui"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/image_view_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <!--界面的进度条-->
+    <TextView
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/text_view_author"
+        android:layout_marginLeft="150dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_height="wrap_content"/>
+
     <ProgressBar
         android:layout_marginTop="500dp"
         android:layout_marginLeft="30dp"
         android:id="@+id/progress_bar"
-        style="@android:style/Widget.ProgressBar.Large"
+        style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

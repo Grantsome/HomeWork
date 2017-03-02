@@ -11,7 +11,7 @@ public class ApiUtil {
     //基础地址，每一个接口都会有，每一个API具体地址必须使用的string
     public static final String BASEURL = "http://news-at.zhihu.com/api/4/";
     //开始的时候出现的图片，貌似不能用了
-    public static final String START = "start-image/1080*1776";
+    public static final String START = "http://news-at.zhihu.com/api/7/prefetch-launch-images/1080*1668";
     //
     public static final String THEMES = "themes";
     //最新消息
