@@ -110,8 +110,4 @@ public class LoginActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(menuItem);
     }
 
-    public boolean isLogin(){
-        return isLogin;
-    }
-
 }

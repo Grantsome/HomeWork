@@ -13,6 +13,7 @@ import com.grantsome.zhihudaily.R;
 import com.grantsome.zhihudaily.Util.ApiUtil;
 import com.grantsome.zhihudaily.Util.HttpUtil;
 import com.grantsome.zhihudaily.Util.LogUtil;
+import com.grantsome.zhihudaily.Util.PreUtil;
 import com.loopj.android.http.TextHttpResponseHandler;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -76,11 +77,15 @@ public class StartActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, String responseString) {
                    String response = responseString.toString();
+                    //有网络的时候保存,可以供离线使用
+                   PreUtil.putStringToDefault(getApplicationContext(),"startInfo",response);
                    parseToImage(response);
                 }
             });
         }else {
-            //imageViewStart.setImageResource(R.drawable.start_ui);
+            //没有网络的时候加载以前的json
+            String response = PreUtil.getStringFromDefault(getApplicationContext(),"startInfo","");
+            parseToImage(response);
         }
     }
 
@@ -91,7 +96,6 @@ public class StartActivity extends AppCompatActivity {
         int i=0;
         imageViewStart = (ImageView) findViewById(R.id.image_view_start);
         textViewStart = (TextView) findViewById(R.id.text_view_author);
-        LogUtil.d("StartActivity","url"+startImageInfo.getCreatives().get(i).getUrl());
         imageLoader.displayImage(startImageInfo.getCreatives().get(i).getUrl(),imageViewStart,displayImageOptions);
         textViewStart.setText(startImageInfo.getCreatives().get(i).getText());
     }
