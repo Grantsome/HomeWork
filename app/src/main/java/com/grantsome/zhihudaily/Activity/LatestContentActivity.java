@@ -19,7 +19,6 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.grantsome.zhihudaily.Database.WebCacheDbHelper;
-import com.grantsome.zhihudaily.Fragment.BackgroundFragment;
 import com.grantsome.zhihudaily.Model.ExtraInfo;
 import com.grantsome.zhihudaily.Model.NewsContent;
 import com.grantsome.zhihudaily.Model.Stories;
@@ -53,7 +52,6 @@ public class LatestContentActivity extends AppCompatActivity {
 
     private CoordinatorLayout coordinatorLayout;
 
-    private BackgroundFragment backgroundFragment;
 
     private Stories stories;
 

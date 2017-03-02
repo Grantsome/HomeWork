@@ -100,10 +100,6 @@
         "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\drawable\\login_ui.PNG",
-        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable\\login_ui.PNG"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_internal_bg.xml",
         "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
@@ -134,6 +130,10 @@
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\drawable\\login_ui.png",
+        "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\drawable\\login_ui.png"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\drawable\\design_snackbar_background.xml",

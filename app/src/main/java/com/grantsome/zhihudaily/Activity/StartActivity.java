@@ -80,7 +80,7 @@ public class StartActivity extends AppCompatActivity {
                 }
             });
         }else {
-            imageViewStart.setImageResource(R.drawable.start_ui);
+            //imageViewStart.setImageResource(R.drawable.start_ui);
         }
     }
 

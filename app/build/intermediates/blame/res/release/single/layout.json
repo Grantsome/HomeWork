@@ -20,12 +20,12 @@
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\news_item.xml"
     },
     {
-        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\layout\\activity_comments.xml",
         "source": "G:\\Test\\HomeWork\\app\\src\\main\\res\\layout\\activity_comments.xml"
+    },
+    {
+        "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "G:\\Test\\HomeWork\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "G:\\Test\\HomeWork\\app\\build\\intermediates\\res\\merged\\release\\layout\\design_layout_snackbar_include.xml",
