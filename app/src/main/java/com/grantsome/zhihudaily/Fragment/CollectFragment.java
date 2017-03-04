@@ -22,7 +22,6 @@ import com.grantsome.zhihudaily.Adapter.NewsItemAdapter;
 import com.grantsome.zhihudaily.Database.MyDataBaseHelper;
 import com.grantsome.zhihudaily.Model.Stories;
 import com.grantsome.zhihudaily.R;
-import com.grantsome.zhihudaily.Util.ApiUtil;
 import com.grantsome.zhihudaily.Util.LogUtil;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -50,7 +49,7 @@ public class CollectFragment extends BaseFragment {
 
     private MyDataBaseHelper myDataBaseHelper;
 
-
+    private boolean isCollected = false;
 
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -75,20 +74,12 @@ public class CollectFragment extends BaseFragment {
                         public void onClick(View view) {
                             if(isFromLatestActivity) {
                                 Intent intent = new Intent(activity, LatestContentActivity.class);
-                                int[] startingLocation = new int[2];
-                                view.getLocationOnScreen(startingLocation);
-                                startingLocation[0] += view.getWidth() / 2;
-                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
                                 intent.putExtra("code", code);
                                 intent.putExtra("title", title);
                                 startActivity(intent);
                             }
                             if (!isFromLatestActivity){
                                 Intent intent = new Intent(activity, NewsContentActivity.class);
-                                int[] startingLocation = new int[2];
-                                view.getLocationOnScreen(startingLocation);
-                                startingLocation[0] += view.getWidth() / 2;
-                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
                                 intent.putExtra("code", code);
                                 intent.putExtra("title", title);
                                 startActivity(intent);
@@ -104,11 +95,14 @@ public class CollectFragment extends BaseFragment {
         }
         if(stories != null){
             SQLiteDatabase sqLiteDatabase = myDataBaseHelper.getWritableDatabase();
-            ContentValues contentValues = new ContentValues();
-            contentValues.put("title",stories.getTitle());
-            contentValues.put("code",stories.getId());
-            LogUtil.d("CollectFragment","contentValue.put(code)" + stories.getId());
-            sqLiteDatabase.insert("Collect",null,contentValues);
+            if(!isContain(sqLiteDatabase,stories)) {
+                LogUtil.d("CollectFragment", "加入数据");
+                ContentValues contentValues = new ContentValues();
+                contentValues.put("title", stories.getTitle());
+                contentValues.put("code", stories.getId());
+                LogUtil.d("CollectFragment", "contentValue.put(code)" + stories.getId());
+                sqLiteDatabase.insert("Collect", null, contentValues);
+            }
             Cursor cursor = sqLiteDatabase.query("Collect",null,null,null,null,null,null);
             if (cursor.moveToFirst()){
                 do{
@@ -124,20 +118,12 @@ public class CollectFragment extends BaseFragment {
                             if(isFromLatestActivity) {
                                 LogUtil.d("CollectFragment", "textView点击事件已经开始执行");
                                 Intent intent = new Intent(activity, LatestContentActivity.class);
-                                int[] startingLocation = new int[2];
-                                view.getLocationOnScreen(startingLocation);
-                                startingLocation[0] += view.getWidth() / 2;
-                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
                                 intent.putExtra("title", title);
                                 intent.putExtra("code", code);
                                 startActivity(intent);
                             }
                             if(!isFromLatestActivity){
                                 Intent intent = new Intent(activity, NewsContentActivity.class);
-                                int[] startingLocation = new int[2];
-                                view.getLocationOnScreen(startingLocation);
-                                startingLocation[0] += view.getWidth() / 2;
-                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
                                 intent.putExtra("title", title);
                                 intent.putExtra("code", code);
                                 startActivity(intent);
@@ -154,7 +140,6 @@ public class CollectFragment extends BaseFragment {
                             if(isFromLatestActivity) {
                                 Intent intent = new Intent(activity, LatestContentActivity.class);
                                 Stories stories = ((CollectActivity) getActivity()).getStories();
-                                intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
                                 intent.putExtra("stories", stories);
                                 intent.putExtra("title", title);
                                 intent.putExtra("code", code);
@@ -163,7 +148,6 @@ public class CollectFragment extends BaseFragment {
                             if(!isFromLatestActivity){
                                     Intent intent = new Intent(activity, NewsContentActivity.class);
                                     Stories stories = ((CollectActivity) getActivity()).getStories();
-                                    intent.putExtra(ApiUtil.START_LOCATION, startingLocation);
                                     intent.putExtra("stories", stories);
                                     intent.putExtra("title", title);
                                     intent.putExtra("code", code);
@@ -178,11 +162,33 @@ public class CollectFragment extends BaseFragment {
             }
             cursor.close();
         }
+
         imageLoader = ImageLoader.getInstance();
 
         listViewNews.setBackgroundColor(ContextCompat.getColor(activity,R.color.white));
         return view;
     }
 
+    private boolean isContain(SQLiteDatabase sqLiteDatabase,Stories stories){
+        Cursor cursor = sqLiteDatabase.query("Collect",null,null,null,null,null,null);
+        if(cursor.moveToFirst()){
+            do{
+                int code = cursor.getInt(cursor.getColumnIndex("code"));
+                if(code==stories.getId()){
+                    isCollected = true;
+                    LogUtil.d("CollectFragment","是否已经含有"+isCollected);
+                    try {
+                        sqLiteDatabase.delete("Collect","code = ?",new String[] {String.valueOf(stories.getId())});
+                        // sqLiteDatabase.delete("Collect","title = ?",new String[] {"stories.getTitle()"});
+                        LogUtil.d("CollectFragment","已经删除");
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return isCollected;
+    }
 
 }
